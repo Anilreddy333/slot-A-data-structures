@@ -1,0 +1,35 @@
+include <stdio.h>
+
+int main() {
+    int marks[7];
+    int total = 0;
+
+    // Read the marks of seven subjects
+    printf("Enter the marks of seven subjects: ");
+    for (int i = 0; i < 7; i++) {
+        scanf("%d", &marks[i]);
+        total += marks[i];
+    }
+
+    // Calculate the percentage
+    float percentage = (float) total / 7;
+
+    // Determine the division based on the percentage
+    char* division;
+    if (percentage >= 80) {
+        division = "Distinction";
+    } else if (percentage >= 60) {
+        division = "First Division";
+    } else if (percentage >= 45) {
+        division = "Second Division";
+    } else if (percentage >= 32) {
+        division = "Third Division";
+    } else {
+        division = "Fail";
+    }
+
+    // Print the percentage and division
+    printf("Percentage: %.2f%%\n", percentage);
+    printf("Division: %s\n", division);
+
+    return 0;
