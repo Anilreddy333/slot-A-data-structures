@@ -1,0 +1,25 @@
+using namespace std;
+int main(){
+int n;
+int arr[n];
+cin>>n;
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+}
+for(int i=0;i<n;i++){
+	int c=arr[i];
+	int j=i-1;
+	while(arr[j]>arr[i]&&j>=0){
+		arr[j+1]=arr[j];
+		j--;
+}
+arr[j+1]=c;
+}
+for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+}
+return 0;
+
+}
+0 comments on commit ac91172
+@Karthikyasa99
